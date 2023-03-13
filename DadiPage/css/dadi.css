@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  #jc-dado h1 {
+    font-family:'Rubik Iso', cursive;
+    font-size: 5rem;
+    color: rgb(238, 217, 217);
+  }
