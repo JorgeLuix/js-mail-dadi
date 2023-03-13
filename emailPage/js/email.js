@@ -20,18 +20,18 @@ ListGuests = [
 
 const emailInput = document.getElementById("email-input");
 const checkButton = document.getElementById("check-button");
-const checkButtonCancellare = document.getElementById("check-button-cancellare");
+const checkButtonCancellare = document.getElementById("check-button-cancella");
 const result = document.getElementById("result");
 
 checkButton.addEventListener("click", function() {
-  const email = emailInput.value.trim().toLowerCase();
-  if (email) {
-    result.textContent = "Benvenuto(a) alla festa" ;
-  } else {
-    result.textContent = "Mi dispiace, non sei in lista d'invitati";
-  }
+    let email = emailInput.value.trim().toLowerCase();
+        if (ListGuests.includes (email)) {
+            result.innerHTML = `<p>Benvenuto(a) alla festa</p>` ;
+          } else {
+            result.innerHTML = `<p>Mi dispiace, non sei in lista d'invitati</p>`;
+          }
+ 
 })
   checkButtonCancellare.addEventListener('click', function(){
     emailInput.value= '';
-
 })
