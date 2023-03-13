@@ -16,8 +16,8 @@ function rollDice() {
   let giocatoreRoll = Math.floor(Math.random() * 6) + 1;
   let computerRoll = Math.floor(Math.random() * 6) + 1;
 
-  giocatoreScore += giocatoreRoll;
-  computerScore += computerRoll;
+  giocatoreScore = giocatoreRoll;
+  computerScore = computerRoll;
   giocatoreScoreDisplay.innerHTML = giocatoreScore;
   computerScoreDisplay.innerHTML = computerScore;
 
