@@ -5,12 +5,12 @@
  box-sizing: border-box;
 }
 /*utilities*/
-.flex-column {
+.jc-flex-column {
   display: flex;
   flex-direction: column;
 }
 
-.flex-center {
+.jc-flex-center {
   justify-content: center;
   align-items: center;
 }
@@ -23,7 +23,7 @@
   text-align: center;
 }
 /******utilities*****/
-.container {
+.jc-container {
   width: 100vw;
   height: 100vh;
   display: flex;
