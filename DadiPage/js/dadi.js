@@ -24,15 +24,19 @@ function rollDice() {
   
   if (giocatoreScore > computerScore) {
     winnerDisplay.innerHTML = 
-    `<p class="fw-bold text-success"> Hai vinto!!</p>`;
+    
+    `<p class="fw-bold text-success">
+    <i class="fa-solid fa-face-smile"></i> Hai vinto!!</p>`;
   
   } else if (computerScore > giocatoreScore) {
     winnerDisplay.innerHTML = 
-    `<p class="fw-bold text-danger"> Hai perso!!</p>`;
+    `<p class="fw-bold text-danger">
+    <i class="fa-solid fa-face-sad-tear"></i> Hai perso!!</p>`;
     
   } else {
     winnerDisplay.innerHTML = 
-    `<p class="fw-bold text-info-emphasis"> Hanno pareggiato!!</p>`;
+    `<p class="fw-bold text-info-emphasis">
+    <i class="fa-solid fa-face-surprise"></i> Hanno pareggiato!!</p>`;
    
   }
 }
