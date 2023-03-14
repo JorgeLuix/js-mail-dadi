@@ -1,11 +1,16 @@
 
 
-let giocatoreScore = 0;
-let computerScore = 0;
+let images = [
+  'img-dice/dice-1.webp',
+  'img-dice/dice-2.svg',
+  'img-dice/dice-3.webp',
+  'img-dice/dice-4.webp',
+  'img-dice/dice-5.webp',
+  'img-dice/dice-6.webp'
+];
+let dice = document.querySelectorAll('img');
+console.log(dice);
 
-
-let giocatoreScoreDisplay = document.getElementById('giocatore-score');
-let computerScoreDisplay = document.getElementById('computer-score');
 let winnerDisplay = document.getElementById('winner');
 let Button = document.getElementById('btn-roll');
 let buttonReset = document.getElementById ('Reset');
@@ -13,15 +18,16 @@ let buttonReset = document.getElementById ('Reset');
 
 function rollDice() {
 
+
   let giocatoreRoll = Math.floor(Math.random() * 6) + 1;
   let computerRoll = Math.floor(Math.random() * 6) + 1;
 
-  giocatoreScore = giocatoreRoll;
-  computerScore = computerRoll;
-  giocatoreScoreDisplay.innerHTML = giocatoreScore;
-  computerScoreDisplay.innerHTML = computerScore;
+  document.querySelector("#die-1").setAttribute("src", images[giocatoreRoll]);
+  document.querySelector("#die-2").setAttribute("src", images[computerRoll]);
 
-  
+ giocatoreScore = giocatoreRoll;
+  computerScore = computerRoll;
+
   if (giocatoreScore > computerScore) {
     winnerDisplay.innerHTML = 
     
@@ -45,3 +51,4 @@ Button.addEventListener('click', rollDice);
 buttonReset.addEventListener('click', function() {
     document.getElementById('giocatore-score').reset;
 });
+rollDice();
